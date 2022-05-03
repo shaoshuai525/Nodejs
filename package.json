@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -x npm run server",
+    "server": "node index"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/shaoshuai525/Nodejs#readme",
   "devDependencies": {
-    "@types/node": "^17.0.30"
+    "@types/node": "^17.0.30",
+    "nodemon": "^2.0.16"
   }
 }
