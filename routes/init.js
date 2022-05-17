@@ -10,11 +10,21 @@ const staticRoot = path.resolve(__dirname, "../public");
  */
 app.use("/static", express.static(staticRoot));
 
-app.use("/news", require("./errorMiddleware"));
+
+app.use(express.urlencoded({
+  extended: true
+}))
+
+app.post("/api/student", (req, res) => {
+  console.log(req.body);
+})
 
 app.get("/css/index.css", (req, res) => {
   console.log("abc");
 });
+
+app.use(require("./errorMiddleware"));
+
 
 const port = 3001;
 app.listen(port, () => {
